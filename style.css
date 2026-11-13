@@ -207,3 +207,13 @@ p{margin:0}
   h1{font-size:30px}
   .eyebrow{letter-spacing:.24em}
 }
+
+/* ---- mobile: centered layout for homepage sections ---- */
+@media (max-width:860px){
+  .hero-copy,.split .stack,.band-inner .stack{text-align:center;align-items:center}
+  .hero-copy .lead{margin:0 auto}
+  .split .rule,.band-inner .rule{margin:0 auto}
+  .btns{align-self:stretch}
+  .sub-head,.cat-card,.card .body{text-align:center;align-items:center}
+  .card .meta{align-self:stretch}
+}
