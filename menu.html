@@ -30,7 +30,7 @@
 <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="var m=document.getElementById('mnav');var o=m.classList.toggle('open');this.setAttribute('aria-expanded',o)"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true"><path d="M0 1h22M0 7h22M0 13h22" stroke="currentColor" stroke-width="1.4"/></svg></button>
 </div>
 </div>
-<nav id="mnav" class="mobile-nav" aria-label="Mobile">
+<nav id="mnav" class="mobile-nav" aria-label="Mobile" onclick="if(event.target.tagName==='A'){this.classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false')}">
 <a href="menu.html">Menu</a><a href="index.html#about">About</a><a href="index.html#shop">Shop</a><a href="index.html#visit">Visit</a><a href="https://bbbar.glossgenius.com/services">Book Now</a>
 </nav>
 </header>

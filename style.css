@@ -147,3 +147,63 @@ p{margin:0}
   .band-inner .stack{padding:32px 24px}
   .row{grid-template-columns:1fr}
 }
+
+/* ---- mobile fine-tuning ---- */
+@media (max-width:860px){
+  /* header: tighter, bigger tap target on the hamburger */
+  .site-header .wrap{padding-top:8px;padding-bottom:8px}
+  .header-right .btn{padding:10px 14px;font-size:10.5px;letter-spacing:.2em}
+  .menu-toggle{padding:12px 4px 12px 10px}
+  .mobile-nav.open{gap:0;padding:4px 18px 12px}
+  .mobile-nav a{padding:14px 0;border-bottom:1px solid var(--line)}
+  .mobile-nav a:last-child{border-bottom:0}
+
+  /* hero: the art repeats the header logo, so drop it and let the copy breathe */
+  .hero-img{display:none}
+  .hero .wrap{padding-top:28px;padding-bottom:32px}
+  .hero-copy{gap:14px}
+  .hero-copy .ital{font-size:21px!important}
+
+  /* buttons: full-width, equal, thumb-friendly */
+  .btns{flex-direction:column;gap:10px}
+  .btns .btn{text-align:center;padding:16px 20px}
+
+  /* sections: less dead space between blocks */
+  .section{padding:44px 0}
+  .split{gap:28px}
+
+  /* illustrations: cap their height so each one isn't a full screen */
+  .plate{max-height:230px;object-fit:contain;background:#F0E8DB}
+  #shop .plate{order:-1}
+
+  /* house favorites: swipeable row instead of three tall stacked cards */
+  .favs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:28px -18px 0;padding:0 18px 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .favs::-webkit-scrollbar{display:none}
+  .favs .card{flex:0 0 82%;scroll-snap-align:center}
+  .card img{height:170px;object-fit:contain;background:#F0E8DB}
+  .meta a{padding:10px 0 10px 12px}
+
+  /* facial flight band: shorter art under the copy */
+  .band-inner img{height:200px;object-fit:contain}
+
+  /* footer */
+  .foot-nav{gap:6px 20px}
+  .foot-nav a{padding:8px 0}
+  .site-footer a[href^="tel"]{white-space:nowrap}
+
+  /* menu page */
+  .page-head{padding:32px 0 20px}
+  .cat-grid{padding-bottom:52px;gap:12px}
+  .cat-card{padding:20px}
+  .sub-jump{position:sticky;top:64px;z-index:10;flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;margin:16px -18px 0;padding:10px 18px;background:rgba(246,241,233,.97);border-bottom:1px solid var(--line);scrollbar-width:none}
+  .sub-jump::-webkit-scrollbar{display:none}
+  .sub-jump a{flex:0 0 auto}
+  .sub,.cat-view{scroll-margin-top:124px}
+  .row{padding:18px 0}
+  .row .price{gap:16px;margin-top:4px}
+  .row .price a{margin-left:auto;padding:8px 14px;border:1px solid var(--ink);color:var(--ink)}
+}
+@media (max-width:380px){
+  h1{font-size:30px}
+  .eyebrow{letter-spacing:.24em}
+}
